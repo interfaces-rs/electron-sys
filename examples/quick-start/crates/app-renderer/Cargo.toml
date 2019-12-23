@@ -38,4 +38,4 @@ optional = true
 console_error_panic_hook = "^0.1.6"
 
 [dev-dependencies]
-wasm-bindgen-test = { version = "^0.3.5" }
+wasm-bindgen-test = { version = "^0.3.6" }

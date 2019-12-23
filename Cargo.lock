@@ -309,9 +309,9 @@ checksum = "d907984f8506b3554eab48b8efff723e764ddbf76d4cd4a3fe4196bc00c49a70"
 
 [[package]]
 name = "wasm-bindgen-test"
-version = "0.3.5"
+version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ed5833682054e941db0b7e2b4877b61bbaafd680608e40d268e070d34558b305"
+checksum = "87d10750e72390ddfaad9420525f4e3ed565408586c859aa2bf91f8ebad65774"
 dependencies = [
  "console_error_panic_hook",
  "js-sys",
@@ -323,9 +323,9 @@ dependencies = [
 
 [[package]]
 name = "wasm-bindgen-test-macro"
-version = "0.3.5"
+version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9c5dcf70d21d0ff0ea5cdb97dba9a9b56ddad4a9bd10c8912eedc55618be022f"
+checksum = "5b84bb462de0772abdec0394671153f280483828f883cbaa12d71f6142196a01"
 dependencies = [
  "proc-macro2",
  "quote",
