@@ -1,0 +1,42 @@
+[package]
+publish = false
+edition = "2018"
+name = "activity-monitor-app-main"
+version = "0.1.0"
+authors = ["Darin Morrison <freebroccolo@users.noreply.github.com>"]
+
+[badges]
+maintenance = { status = "experimental" }
+
+[lib]
+crate-type = ["cdylib"]
+doctest = false
+test = false
+
+[features]
+default = ["wee_alloc"]
+
+[dependencies.electron-sys]
+version = "^0.4.0"
+path = "../../../.."
+
+[dependencies]
+node-sys = "^0.4.0"
+
+[dependencies.js-sys]
+version = "^0.3.33"
+features = []
+
+[dependencies.wasm-bindgen]
+version = "^0.2.56"
+features = ["strict-macro"]
+
+[dependencies.wee_alloc]
+version = "^0.4.5"
+optional = true
+
+[target."cfg(debug_assertions)".dependencies]
+console_error_panic_hook = "^0.1.6"
+
+[dev-dependencies]
+wasm-bindgen-test = { version = "^0.3.6" }

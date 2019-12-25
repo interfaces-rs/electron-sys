@@ -59,6 +59,8 @@ wasm-bindgen-test = { version = "^0.3.6" }
 
 [workspace]
 members = [
+  "examples/activity-monitor/crates/app-main",
+  "examples/activity-monitor/crates/app-renderer",
   "examples/hash/crates/app-main",
   "examples/hash/crates/app-renderer",
   "examples/quick-start/crates/app-main",
