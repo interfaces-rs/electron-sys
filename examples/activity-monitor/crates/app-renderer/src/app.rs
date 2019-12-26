@@ -5,6 +5,10 @@ use wasm_bindgen::{prelude::*, JsCast};
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
+thread_local! {
+    static LAST_MEASURE_TIMES: Box<[[f64; 3]]> = Box::new([]);
+}
+
 #[allow(dead_code)]
 fn get_cpus() -> impl Iterator<Item = CpuInfo> {
     os::cpus().into_vec().into_iter().map(JsCast::unchecked_into)
