@@ -1,12 +1,12 @@
-# hash
+# activity-monitor
 
-The Electron [Hash](https://github.com/electron/simple-samples/tree/master/hash) simple sample ported to Rust via wasm-bindgen.
+The Electron [Hash](https://github.com/electron/simple-samples/tree/master/activity-monitor) simple sample ported to Rust via wasm-bindgen.
 
 <img src="../../assets/hash.png" />
 
 ## Status
 
-Working.
+Not yet completed.
 
 ## Requirements
 
