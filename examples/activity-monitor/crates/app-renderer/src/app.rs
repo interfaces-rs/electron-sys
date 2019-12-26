@@ -5,8 +5,14 @@ use wasm_bindgen::prelude::*;
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
-fn set_last_measure_times() {
-    unimplemented!("setLastMeasuretimes")
+#[allow(dead_code)]
+fn set_last_measure_times<T>(cpus: T)
+where
+    T: Iterator<Item = CpuInfo>,
+{
+    for (_i, _cpu) in cpus.enumerate() {
+        unimplemented!("FIXME")
+    }
 }
 
 #[allow(dead_code)]
