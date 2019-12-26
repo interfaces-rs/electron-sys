@@ -78,9 +78,9 @@ impl ChartData {
     }
 
     #[wasm_bindgen(setter)]
-    pub fn set_options(&mut self, value: Option<Box<[JsValue]>>) {
+    pub fn set_datasets(&mut self, value: Option<Box<[JsValue]>>) {
         self.datasets = value;
-    }   
+    }
 }
 
 #[wasm_bindgen]
