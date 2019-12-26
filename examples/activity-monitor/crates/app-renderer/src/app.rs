@@ -1,9 +1,14 @@
-use crate::chart;
-use wasm_bindgen::prelude::*;
+use node_sys::{os, CpuInfo};
+use wasm_bindgen::{prelude::*, JsCast};
 
 #[cfg(feature = "wee_alloc")]
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
+
+#[allow(dead_code)]
+fn get_cpus() -> impl Iterator<Item = CpuInfo> {
+    os::cpus().into_vec().into_iter().map(JsCast::unchecked_into)
+}
 
 #[allow(dead_code)]
 fn set_last_measure_times<T>(cpus: T)
