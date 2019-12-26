@@ -9,18 +9,23 @@ fn set_last_measure_times() {
     unimplemented!("setLastMeasuretimes")
 }
 
+#[allow(dead_code)]
 fn get_datasets() {
     unimplemented!("getDatasets")
 }
 
+#[allow(dead_code)]
 fn update_datasets() {
     unimplemented!("updateDatasets")
 }
 
-fn get_cpu_times() {
-    unimplemented!("getCpuTimes")
+#[allow(dead_code)]
+fn get_cpu_times(cpu_info: &CpuInfo) -> [f64; 3] {
+    let times = cpu_info.times();
+    [times.user(), times.sys(), times.idle()]
 }
 
+#[allow(dead_code)]
 fn draw_chart() {
     unimplemented!("draw_chart")
 }
