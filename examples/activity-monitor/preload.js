@@ -1,5 +1,5 @@
-const { createHash } = require('crypto');
+const { cpus } = require('os');
 
 process.once('loaded', () => {
-    global.createHash = createHash;
+    global.cpus = cpus;
 });
