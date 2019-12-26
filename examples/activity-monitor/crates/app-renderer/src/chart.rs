@@ -86,7 +86,7 @@ impl ChartData {
 #[wasm_bindgen]
 #[derive(Debug, Default, Clone)]
 pub struct ChartLegendOptions {
-    pub display: Option<bool>,
+    display: Option<bool>,
     labels: Option<ChartLegendLabelOptions>,
 }
 
@@ -95,6 +95,16 @@ impl ChartLegendOptions {
     #[wasm_bindgen(constructor)]
     pub fn new() -> ChartLegendOptions {
         Default::default()
+    }
+
+    #[wasm_bindgen(getter)]
+    pub fn display(&self) -> Option<bool> {
+        self.display
+    }
+
+    #[wasm_bindgen(setter)]
+    pub fn set_display(&mut self, value: Option<bool>) {
+        self.display = value;
     }
 
     #[wasm_bindgen(getter)]
@@ -146,7 +156,7 @@ impl ChartLegendLabelOptions {
 #[wasm_bindgen]
 #[derive(Debug, Default, Clone)]
 pub struct ChartTitleOptions {
-    pub display: Option<bool>,
+    display: Option<bool>,
     font_color: Option<JsString>,
     font_size: Option<u8>,
     text: Option<JsString>,
@@ -157,6 +167,16 @@ impl ChartTitleOptions {
     #[wasm_bindgen(constructor)]
     pub fn new() -> ChartTitleOptions {
         Default::default()
+    }
+
+    #[wasm_bindgen(getter)]
+    pub fn display(&self) -> Option<bool> {
+        self.display
+    }
+
+    #[wasm_bindgen(setter)]
+    pub fn set_display(&mut self, value: Option<bool>) {
+        self.display = value;
     }
 
     #[wasm_bindgen(getter, js_name = "fontColor")]
