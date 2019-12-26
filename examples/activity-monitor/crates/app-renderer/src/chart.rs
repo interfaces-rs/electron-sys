@@ -194,7 +194,7 @@ impl ChartTitleOptions {
 #[derive(Debug, Default, Clone)]
 pub struct ChartOptions {
     legend: Option<ChartLegendOptions>,
-    pub maintain_aspect_ratio: Option<bool>,
+    maintain_aspect_ratio: Option<bool>,
     title: Option<ChartTitleOptions>,
 }
 
@@ -213,6 +213,16 @@ impl ChartOptions {
     #[wasm_bindgen(setter)]
     pub fn set_legend(&mut self, value: Option<ChartLegendOptions>) {
         self.legend = value;
+    }
+
+    #[wasm_bindgen(getter, js_name = "maintainAspectRatio")]
+    pub fn maintain_aspect_ratio(&self) -> Option<bool> {
+        self.maintain_aspect_ratio
+    }
+
+    #[wasm_bindgen(setter)]
+    pub fn set_maintain_aspect_ratio(&mut self, value: Option<bool>) {
+        self.maintain_aspect_ratio = value;
     }
 
     #[wasm_bindgen(getter)]
